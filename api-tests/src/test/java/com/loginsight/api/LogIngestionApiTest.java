@@ -5,12 +5,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+
 import static org.hamcrest.Matchers.equalTo;
 
 /**
  * Contract tests for the log ingestion endpoints. These run against a live
  * instance at {@code api.base.url}; they are tagged {@code api} so they can be
- * excluded with {@code -Dgroups=!api} when no server is available.
+ * excluded with {@code -Dgroups=!api} when no server is available jji.
  */
 @Tag("api")
 class LogIngestionApiTest extends BaseApiTest {
