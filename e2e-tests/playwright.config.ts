@@ -1,3 +1,24 @@
-// playwright config v1
-// screenshot on failure
-// retries: CI ? 2 : 0
+import { defineConfig, devices } from '@playwright/test';
+
+const baseURL = process.env.E2E_BASE_URL ?? 'http://localhost:5173';
+const isCI = !!process.env.CI;
+
+export default defineConfig({
+  testDir: './tests',
+  timeout: 30000,
+  fullyParallel: true,
+  retries: isCI ? 2 : 0,
+  reporter: [['html', { open: 'never' }], ['list']],
+  use: {
+    baseURL,
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+  },
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ],
+});
