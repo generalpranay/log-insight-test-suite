@@ -2,3 +2,4 @@
 ## Unit Tests
 ## Integration Tests
 ## Performance Tests
+## Testing Pyramid
