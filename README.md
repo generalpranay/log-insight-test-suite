@@ -3,3 +3,4 @@
 ## Integration Tests
 ## Performance Tests
 ## Testing Pyramid
+<!-- ci badge -->
