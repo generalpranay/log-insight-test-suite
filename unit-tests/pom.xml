@@ -1,2 +1,3 @@
 <!-- unit-tests module -->
 <!-- surefire 3.2.5 useModulePath=false -->
+<!-- jacoco 0.8.11 line >= 80% -->
